@@ -1,0 +1,23 @@
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+import joblib
+
+# Read dataset
+data = pd.read_csv("heat_data.csv")
+
+# Inputs
+X = data[["Temperature", "Humidity", "WindSpeed"]]
+
+# Output
+y = data["HeatRisk"]
+
+# Create model
+model = RandomForestClassifier()
+
+# Train model
+model.fit(X, y)
+
+# Save model
+joblib.dump(model, "model.pkl")
+
+print("Model trained successfully!")
