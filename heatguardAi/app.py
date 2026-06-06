@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load trained model
-model = joblib.load("model.pkl")
+model = joblib.load("heatguardAi/model.pkl")
 
 # Page configuration
 st.set_page_config(
