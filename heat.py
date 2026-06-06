@@ -20,6 +20,8 @@ print("🔥 HeatGuard AI Model Trained Successfully")
 
 import streamlit as st
 import joblib
+import pandas as pd
+import plotly.express as px
 
 # Load trained model
 model = joblib.load("model.pkl")
